@@ -8,8 +8,8 @@
         </div>
     
         <div class="panel-body">
-            <div class="form-group" [class.has-error]="nameControl.invalid && nameControl.touched"
-                [class.has-success]="nameControl.valid">
+            <div class="form-group" [class.has-error]="fullname.invalid && fullname.touched"
+                [class.has-success]="fullname.valid">
                 <label for="fullname">Full Name</label>
                 <input required id="fullname" type="text" class="form-control" name="fullname" 
                 [(ngModel)]="employee.fullname" #fullname="ngModel">
@@ -26,7 +26,7 @@
 
             <div class="form-group">
                 <label for="phoneNumber">Phone Number</label>
-                <input required id="phoneNumber" type="text" class="form-control" name="phoneNumber" [(ngModel)]=".employeephoneNumber">
+                <input required id="phoneNumber" type="text" class="form-control" name="phoneNumber" [(ngModel)]="employee.phoneNumber">
             </div>
 
             <div class="form-group">
@@ -94,16 +94,14 @@
             </div>
 
             <div class="form-group">
-                <button class="btn btn-primary">
-                <!-- <button (click)="togglePhotoPreview()" class="btn btn-primary"> -->
-                    <!-- {{previewPhoto? "Hide ": "Show "}} -->
-                    {{previewPhoto? "Side: " "Show "}} Preview
+                <button (click)="togglePhotoPreview()" class="btn btn-primary">
+                    {{previewPhoto? "Hide ": "Show "}} Preview
                 </button>
             </div>
 
             <div class="form-group">
-                <img [src]="photoPath" alt="picture" height="200" width="200">
-                <img [src]="photoPath" alt="picture" height="200" width="200" *ngIf="previewPhoto">
+                <img [src]="employee.photoPath" alt="picture" height="200" width="200" *ngIf="previewPhoto">
+                <!-- kasutada assets/images/john.png-->
             </div>
 
             <div class="panel-footer">
@@ -111,13 +109,13 @@
                 [disabled]="employeeForm.invalid">Save</button>
             </div>
 
-            <h2>Full Name Control</h2>
-            <div>touched: {{nameControl.touched}}</div>
-            <div>untouched: {{nameControl.untouched}}</div>
-            <div>pristine: {{nameControl.pristine}}</div>
-            <div>dirty: {{nameControl.dirty}}</div>
-            <div>valid: {{nameControl.valid}}</div>
-            <div>invalid: {{nameControl.invalid}}</div>
+            <!-- <h2>Full Name Control</h2>
+            <div>touched: {{fullname.touched}}</div>
+            <div>untouched: {{fullname.untouched}}</div>
+            <div>pristine: {{fullname.pristine}}</div>
+            <div>dirty: {{fullname.dirty}}</div>
+            <div>valid: {{fullname.valid}}</div>
+            <div>invalid: {{fullname.invalid}}</div>
 
             <h2>Employee Form</h2>
             <div>touched: {{employeeForm.touched}}</div>
@@ -125,7 +123,7 @@
             <div>pristine: {{employeeForm.pristine}}</div>
             <div>dirty: {{employeeForm.dirty}}</div>
             <div>valid: {{employeeForm.valid}}</div>
-            <div>invalid: {{employeeForm.invalid}}</div>
+            <div>invalid: {{employeeForm.invalid}}</div> -->
 
 
         </div>
