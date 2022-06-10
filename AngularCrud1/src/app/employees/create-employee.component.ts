@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { NgModel } from '@angular/forms';
 import { Department } from '../models/department.model'
 import { Employee } from '../models/employee.model';
 
@@ -15,17 +14,16 @@ export class CreateEmployeeComponent implements OnInit {
   previewPhoto = false;
 
   employee: Employee = {
-
-      id: null,
-      name: null,
-      gender: null,
-      email: null,
-      phoneNumber: null,
-      contactPreference: null,
-      dateOfBirth: null,
-      department: null,
-      isActive: null,
-      photoPath: null,
+      id: 0,
+      fullname: '',
+      gender: '',
+      email: '',
+      phoneNumber: 0,
+      contactPreference: '',
+      dateOfBirth: new Date(),
+      department: '',
+      isActive: false,
+      photoPath: '',
 
   };
 
