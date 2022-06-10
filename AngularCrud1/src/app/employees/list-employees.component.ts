@@ -36,14 +36,14 @@ export class ListEmployeesComponent implements OnInit {
       name: 'John',
       gender: 'Male',
       contactPreference: 'Phone',
-      phoneNumber: 234567890,
+      phoneNumber: 123456789,
       dateOfBirth: new Date('04/20/1996'),
       department: 'IT',
       isActive: true,
       photoPath: 'assets/images/john.png'
-    }
-  ];
-
+    },
+  ]
+  
   constructor() { }
 
   ngOnInit(): void {
