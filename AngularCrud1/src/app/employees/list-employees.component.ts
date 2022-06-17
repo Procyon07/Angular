@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../models/employee.model';
+// import { EmployeeService } from './employee.service';
 
 @Component({
   selector: 'app-list-employees',
@@ -18,7 +19,9 @@ export class ListEmployeesComponent implements OnInit {
       dateOfBirth: new Date('11/01/2000'),
       department: 'IT',
       isActive: true,
-      photoPath: 'assets/images/mark.png'
+      photoPath: 'assets/images/mark.png',
+      password: '',
+      confirmPassword: '',
     },
     {
       id: 2,
@@ -29,21 +32,25 @@ export class ListEmployeesComponent implements OnInit {
       dateOfBirth: new Date('05/27/2000'),
       department: 'HR',
       isActive: true,
-      photoPath: 'assets/images/mary.png'
+      photoPath: 'assets/images/mary.png',
+      password: '',
+      confirmPassword: '',
     },
     {
       id: 3,
       fullname: 'John',
       gender: 'Male',
       contactPreference: 'Phone',
-      phoneNumber: 123456789,
+      phoneNumber: 234567890,
       dateOfBirth: new Date('04/20/1996'),
       department: 'IT',
       isActive: true,
-      photoPath: 'assets/images/john.png'
-    },
-  ]
-  
+      photoPath: 'assets/images/john.png',
+      password: '',
+      confirmPassword: '',
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
